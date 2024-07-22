@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+#wrap{}
+
+/* 해더 영역 */
+
+#header{
+    width: 1164px;
+    margin: 0 auto;
+}
+
+.head_inner{}
+
+/* 해더 영역의 윗영역 */
+
+.h_top{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+
+.logo{}
+
+.util{
+    display: flex;
+}
+.util>li{
+    position: relative;
+}
+.util>li>a{
+    display: block;
+    font-size: 12px;
+    line-height: 28px;
+    color: #555;
+}
+
+.util>li:hover>a{
+    color: red;
+}
+
+.util_log, .util_join, .util_myca{
+    padding: 0 10px;
+}
+
+
+.util_log, .util_join{
+    background: url(../images/bar_main_util_top.png) no-repeat right center;
+}
+
+.util_myca{}
+.util_myca>a{
+    background: url(../images/ico_down01.gif) no-repeat right center;
+    padding-right: 15px;
+}
+
+/* 호버시 위아래 화살표 모양이 바뀌게 설정 */
+.util_myca:hover>a{
+    background: url(../images/ico_up01.gif) no-repeat right center;
+}
+
+/* 서브메뉴 설정(스크립트 적용 예정) */
+.util_myca .my{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 130px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    transform: translateX(-50%);
+    z-index: 50;
+    display: none;
+}
+.util_myca .my li{
+    padding: 5px 0;
+}
+.util_myca .my li a{
+    font-size: 12px;
+}
+
+.util_regist{
+    margin: 0 10px;
+}
+.util_regist a{
+    display: block;
+    background-color: darkred;
+    color: white !important;
+    /* 위에서 이미 걸어놨기에 !important를 걸어줘야 적용된다 */
+    padding: 0 8px;
+}
+
+.util_search{
+    margin: 0 10px;
+}
+.util_search input{
+    display: block;
+    width: 120px;
+    height: 28px;
+    border: 1px solid #ddd;
+    background: url(../images/util_seh.png) no-repeat 5px center;
+}
+
+.util_site{}
+.util_site a{
+    display: block;
+    background: #888 url(../images/icon_casite.png) no-repeat 78px -10px;
+    padding: 0 25px 0 10px;
+    color: white !important;
+}
+
+.util_site:hover a{
+    background: #3f3f3f url(../images/icon_casite.png) no-repeat 78px 10px;
+}
+
+/* 해더 영역의 아래영역 */
+
+.h_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gnb{
+    display: flex;
+}
+.gnb>li{
+    position: relative;
+}
+.gnb>li>a{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.gnb>li:hover>a{
+    color: darkred;
+}
+
+.gnb>li>a>span.e_img{
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    background: url(../images/gnb_e_nor.png) no-repeat;
+    text-indent: -9999px;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+
+.gnb>li:hover>a>span.e_img{
+    background: url(../images/gnb_e_nor_hov.png) no-repeat;
+}
+
+.d_wrap{
+    position: absolute;
+    width: 1164px;
+    background-color: #f1f1f1;
+    display: flex;
+    /* padding: 20px; */
+    /* 나중에 script로 block이 아니라 flex로 나오게끔 해야 함 */
+    z-index: 40;
+    overflow: hidden;
+    height: 0;
+}
+
+.d_banner{}
+.d_banner li:last-child{
+    margin-top: 20px;
+}
+.d_depth{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.d_depth li{
+    width: calc(100% / 5);
+    text-align: center;
+}
+
+.d_depth li a{
+    display: block;
+    height: 100px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.d_depth li:hover a{
+    border-bottom: 1px solid red;
+}
+.d_depth li a img{}
+.d_depth li a p{
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.g_gallery{
+    display: flex;
+}
+.g_gallery li{}
+.g_gallery li a{
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 20px;
+}
+
+.g_gallery li:hover a{
+    color: darkred;
+}
+
+.g_gallery li a img{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 8px;
+
+}
+
+/* 슬라이드 영역 */
+
+.main_visual{
+    width: 1164px;
+    margin: 0 auto;
+    height: 580px;
+    /* border: 1px solid red; */
+    position: relative;
+    background-color: beige;
+}
+
+.move{}
+
+.move .slick-slide{
+    width: 100%;
+    height: 536px;
+}
+/* .move .slick-slide는 .move의 자식을 의미한다 (slick 적용시) */
+.move .slick-dots{
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+}
+.move .slick-dots li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.move .slick-dots li button{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(../images/btn_rolling_b.png);
+    text-indent: -9999px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.move .slick-dots li.slick-active button{
+    background-image: url(../images/btn_rolling_b_on.png);
+}
+
+/* 버튼 누르면 슬라이드 이미지 정지되거나 재생되게(script 작업) */
+.main_visual .stop{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    background-image: url(../images/btn_rolling_b_stop.png);
+    border: none;
+    text-indent: -9999px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% + 90px);
+}
+
+.main_visual .stop.on{
+    background-image: url(../images/btn_rolling_b_play.png);
+}

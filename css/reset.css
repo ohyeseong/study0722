@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol, li{
+    list-style: none;
+}
+a{text-decoration: none;color: inherit;}
+
+
+.clear_fix::before,
+.clear_fix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body{
+    font-family: "고딕";
+    font-size: 14px;
+    color: #444;
+}
+table{
+    border-collapse: collapse;
+}
+img{
+    vertical-align: bottom;
+}
